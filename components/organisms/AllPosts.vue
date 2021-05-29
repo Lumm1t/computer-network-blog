@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <v-container>
     <div v-if="error">{{ error }}</div>
-    <v-container v-else-if="posts">
-      <div v-for="(post, i) in posts.allPosts" :key="i">
+
+    <div v-else-if="response">
+      <div v-for="(post, i) in response.allPosts" :key="i">
         <PostCard :post="post" />
       </div>
-    </v-container>
-  </div>
+    </div>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -26,12 +27,12 @@ const query = `
 export default Vue.extend({
   name: 'AllPosts',
   data: () => ({
-    posts: [],
+    response: undefined,
     error: undefined,
   }),
   async mounted() {
     try {
-      this.posts = await request({
+      this.response = await request({
         query,
         variables: {},
         preview: false,

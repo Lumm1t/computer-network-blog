@@ -2,6 +2,6 @@
   <v-app>
     <NavBar />
 
-    <nuxt />
+    <nuxt class="mt-16" />
   </v-app>
 </template>

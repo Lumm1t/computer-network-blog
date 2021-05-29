@@ -1,6 +1,8 @@
 <template>
   <div>
-    <v-app-bar elevate-on-scroll>
+    <v-app-bar elevate-on-scroll fixed>
+      <nuxt-link to="/" tag="h1">Blog o sieciach</nuxt-link>
+
       <v-spacer></v-spacer>
 
       <ThemeBtn />
