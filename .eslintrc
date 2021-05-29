@@ -34,6 +34,8 @@
     "unicorn/prevent-abbreviations": "off",
     "unicorn/prefer-module": "off",
 
+    "sonarjs/no-duplicate-string": "off",
+
     "no-void": "off",
     "prefer-const": "warn",
     "no-console": "off",

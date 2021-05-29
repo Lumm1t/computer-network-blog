@@ -3,12 +3,24 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: 'Blog o sieciach%s',
+    titleTemplate: 'Sieci%s',
     title: '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Blog o sieciach',
+      },
+      {
+        name: 'keywords',
+        content: 'sieci, komputerowe, blog, kompendium',
+      },
+      {
+        name: 'author',
+        content: 'Aleksander Szołowicz, Stanisław Fijołek',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -47,8 +59,17 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta: {
+      title: 'Kompendium wiedzy o sieciach',
+      author: 'Aleksander Szołowicz, Stanisław Fijołek',
+      description: 'Blog o sieciach',
+      lang: 'pl',
+    },
     manifest: {
-      lang: 'en',
+      name: 'Kompendium wiedzy o sieciach',
+      short_name: 'SIECI',
+      description: 'Blog o sieciach',
+      lang: 'pl',
     },
   },
 
@@ -72,5 +93,21 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    html: {
+      minify: {
+        collapseBooleanAttributes: true,
+        decodeEntities: false,
+        minifyCSS: true,
+        minifyJS: true,
+        processConditionalComments: true,
+        removeEmptyAttributes: true,
+        removeRedundantAttributes: true,
+        trimCustomFragments: true,
+        useShortDoctype: true,
+        preserveLineBreaks: false,
+        collapseWhitespace: true,
+      },
+    },
+  },
 }
