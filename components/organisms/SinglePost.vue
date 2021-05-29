@@ -61,3 +61,10 @@ export default Vue.extend({
   },
 })
 </script>
+
+<style>
+img {
+  max-width: 600px;
+  height: auto;
+}
+</style>
