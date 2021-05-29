@@ -37,9 +37,15 @@ export default Vue.extend({
     },
   },
   data: () => ({
+    title: '',
     response: undefined,
     error: undefined,
   }),
+  head() {
+    return {
+      title: this.title,
+    }
+  },
   async mounted() {
     try {
       this.response = await request({
@@ -55,6 +61,8 @@ export default Vue.extend({
         variables: {},
         preview: false,
       })
+
+      this.title = ` - ${this.response.post.title}`
     } catch (error) {
       this.error = error
     }
