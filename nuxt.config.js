@@ -43,23 +43,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-    // https://github.com/nuxt-community/apollo-module
-    '@nuxtjs/apollo',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
       lang: 'en',
-    },
-  },
-
-  apollo: {
-    clientConfigs: {
-      default: {
-        httpEndpoint: 'https://graphql.datocms.com',
-        getAuth: () => `Bearer ${process.env.DATOCMS_API_TOKEN}`,
-      },
     },
   },
 
