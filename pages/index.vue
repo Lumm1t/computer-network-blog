@@ -1,3 +1,5 @@
 <template>
-  <div>index</div>
+  <div>
+    <AllPosts />
+  </div>
 </template>
