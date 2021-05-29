@@ -1,5 +1,10 @@
 <template>
-  <v-card v-if="post" class="mx-auto my-5" max-width="400" :to="post.slug">
+  <v-card
+    v-if="post"
+    class="mx-auto my-5"
+    max-width="400"
+    :to="`post/${post.slug}`"
+  >
     <v-card-title>
       {{ post.title }}
     </v-card-title>
