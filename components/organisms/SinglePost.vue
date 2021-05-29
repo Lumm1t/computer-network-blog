@@ -1,6 +1,12 @@
 <template>
   <v-container>
-    <v-card v-if="response && response.post" class="mx-auto mt-4" width="900">
+    <div v-if="error">{{ error }}</div>
+
+    <v-card
+      v-else-if="response && response.post"
+      class="mx-auto mt-4"
+      width="900"
+    >
       <v-card-title class="text-h4">{{ response.post.title }}</v-card-title>
 
       <v-card-subtitle>
