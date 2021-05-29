@@ -62,6 +62,7 @@ export default Vue.extend({
         preview: false,
       })
 
+      // @ts-expect-error
       this.title = ` - ${this.response.post.title}`
     } catch (error) {
       this.error = error
