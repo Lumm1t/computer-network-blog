@@ -73,7 +73,7 @@ export default Vue.extend({
 
 <style>
 img {
-  max-width: 600px;
+  max-width: 100%;
   height: auto;
 }
 </style>
