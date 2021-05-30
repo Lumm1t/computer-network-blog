@@ -1,7 +1,9 @@
 <template>
   <div>
     <v-app-bar elevate-on-scroll fixed>
-      <nuxt-link to="/" tag="h1">Kompendium wiedzy o sieciach</nuxt-link>
+      <v-toolbar-title style="cursor: pointer" @click="$router.push('/')">
+        Kompendium wiedzy o sieciach
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
