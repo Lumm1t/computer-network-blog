@@ -1,20 +1,28 @@
 # computer-network-blog
 
-## Build Setup
+Basic blog made with Vue, Nuxt and Vuetify.
 
-```bash
-# install dependencies
-$ yarn install
+https://sieci.vercel.app/
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+## Install
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+`git clone https://github.com/Lumm1t/computer-network-blog`
 
-# generate static project
-$ yarn generate
-```
+`npm install` or `yarn`
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Change environment variables:
+
+1. Rename `.env.example` to `.env`
+2. Open `.env` and change `NUXT_ENV_DATOCMS_API_TOKEN`.
+
+## Run
+
+### Development
+
+`npm run dev` or `yarn dev`
+
+### Production
+
+`npm run build` or `yarn build`
+
+`npm run start` or `yarn start`
