@@ -30,7 +30,7 @@ export default Vue.extend({
     response: undefined,
     error: undefined,
   }),
-  async mounted() {
+  async fetch() {
     try {
       this.response = await request({
         query,

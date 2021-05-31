@@ -41,12 +41,7 @@ export default Vue.extend({
     response: undefined,
     error: undefined,
   }),
-  head() {
-    return {
-      title: this.title,
-    }
-  },
-  async mounted() {
+  async fetch() {
     try {
       this.response = await request({
         query: `
@@ -66,6 +61,11 @@ export default Vue.extend({
       this.title = ` - ${this.response.post.title}`
     } catch (error) {
       this.error = error
+    }
+  },
+  head() {
+    return {
+      title: this.title,
     }
   },
 })
