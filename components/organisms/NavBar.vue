@@ -5,6 +5,10 @@
         Kompendium wiedzy o sieciach
       </v-toolbar-title>
 
+      <client-only v-if="$nuxt.$route.path.includes('/post/')">
+        <ProgressBar />
+      </client-only>
+
       <v-spacer></v-spacer>
 
       <ThemeBtn />
@@ -14,6 +18,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+
 export default Vue.extend({
   name: 'NavBar',
 })
