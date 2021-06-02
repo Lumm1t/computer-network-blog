@@ -22,10 +22,10 @@ export default Vue.extend({
       this.width = 0
     },
   },
-  created() {
+  beforeMount() {
     window.addEventListener('scroll', this.scrollHandler)
   },
-  destroyed() {
+  beforeDestroy() {
     window.removeEventListener('scroll', this.scrollHandler)
   },
   methods: {
