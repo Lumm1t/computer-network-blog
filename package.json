@@ -35,7 +35,7 @@
     "@nuxtjs/eslint-config-typescript": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/stylelint-module": "^4.0.0",
-    "@typescript-eslint/eslint-plugin": "4",
+    "@typescript-eslint/eslint-plugin": "5",
     "babel-eslint": "^10.1.0",
     "eslint": "7",
     "eslint-config-prettier": "^8.3.0",
